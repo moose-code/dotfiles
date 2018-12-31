@@ -7,7 +7,10 @@ source ${script_dir}/common.sh
 
 VIM_PLUGIN_LIST="\
 	scrooloose/nerdtree \
-	Valloric/YouCompleteMe
+	Valloric/YouCompleteMe \
+	SirVer/ultisnips \
+	honza/vim-snippets \
+	ervandew/supertab
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 
 
@@ -50,7 +53,7 @@ function main() {
 	done
 
 	info "Extra step needed for YouCompleteMe plugin"
-	_ycm_init 
+	#_ycm_init 
 }
 
 # Entrypoint

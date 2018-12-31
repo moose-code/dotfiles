@@ -23,11 +23,21 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeShowHidden=1
 " Use Ctrl+n to toggle nerdtree:
 map <C-n> :NERDTreeToggle<CR>
-
 " Custom maps
 let mapleader = ","
 nmap <leader>ne :NERDTree<cr>
 
+"""""""""""""""""""""""
+" YouCompleteMe + UltiSnips
+"""""""""""""""""""""""
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 """""""""""""
 " Misc

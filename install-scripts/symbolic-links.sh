@@ -17,4 +17,6 @@ function _link() {
 info "Creating Symbolic links"
 _link ${dotfiles_dir}/.vimrc $HOME/.vimrc
 _link ${dotfiles_dir}/.gitconfig $HOME/.gitconfig
+_link ${dotfiles_dir}/.tmux.conf $HOME/.tmux.conf
+_link ${dotfiles_dir}/.zshrc $HOME/.zshrc
 

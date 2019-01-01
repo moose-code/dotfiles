@@ -24,7 +24,6 @@ function _git_clone() {
 	local repo_folder=$2
 	if pushd ${repo_folder}; then
 		git pull
-		git submodule update --init --recursive
 		popd
 	else
 		git clone ${repo_url} ${repo_folder}
@@ -34,7 +33,8 @@ function _git_clone() {
 # YouCompleteMe needs an install step to start working
 function _ycm_init() {
 	pushd ${VIM_PLUGINS_FOLDER}/YouCompleteMe
-	./install.sh
+	git submodule update --init --recursive
+	./install.py
 	popd
 }
 
@@ -53,7 +53,7 @@ function main() {
 	done
 
 	info "Extra step needed for YouCompleteMe plugin"
-	#_ycm_init 
+	_ycm_init 
 }
 
 # Entrypoint

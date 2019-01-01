@@ -7,8 +7,10 @@ filetype plugin indent on
 """""""""""""""""""""""
 " Synaxt Colors
 """""""""""""""""""""" 
-
-colorscheme evening
+" Background fix: https://serverfault.com/a/485732
+set t_ut=
+"colorscheme evening
+colo monokai-soda
 syntax on
 
 """""""""""""

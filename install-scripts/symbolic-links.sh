@@ -19,4 +19,5 @@ _link ${dotfiles_dir}/.vimrc $HOME/.vimrc
 _link ${dotfiles_dir}/.gitconfig $HOME/.gitconfig
 _link ${dotfiles_dir}/.tmux.conf $HOME/.tmux.conf
 _link ${dotfiles_dir}/.zshrc $HOME/.zshrc
+_link ${dotfiles_dir}/.vim/colors/monokai-soda.vim $HOME/.vim/colors/monokai-soda.vim
 

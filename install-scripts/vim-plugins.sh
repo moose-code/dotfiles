@@ -11,7 +11,8 @@ VIM_PLUGIN_LIST="\
 	SirVer/ultisnips \
 	honza/vim-snippets \
 	ervandew/supertab \
-	airblade/vim-gitgutter
+	airblade/vim-gitgutter \
+	Xuyuanp/nerdtree-git-plugin
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 
 

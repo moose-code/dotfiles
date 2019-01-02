@@ -10,7 +10,8 @@ VIM_PLUGIN_LIST="\
 	Valloric/YouCompleteMe \
 	SirVer/ultisnips \
 	honza/vim-snippets \
-	ervandew/supertab
+	ervandew/supertab \
+	airblade/vim-gitgutter
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 
 

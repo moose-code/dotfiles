@@ -7,6 +7,7 @@ filetype plugin indent on
 """""""""""""""""""""""
 " Synaxt Colors
 """""""""""""""""""""" 
+set t_Co=256
 " Background fix: https://serverfault.com/a/485732
 set t_ut=
 "colorscheme evening
@@ -49,4 +50,7 @@ set ic hls is
 " Show line number
 set number
 " reload content
-set autoread 
+set autoread
+" Update time lowered to 100ms in order to make GitGutter show the changes
+" faster
+set updatetime=100

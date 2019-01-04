@@ -12,7 +12,8 @@ VIM_PLUGIN_LIST="\
 	honza/vim-snippets \
 	ervandew/supertab \
 	airblade/vim-gitgutter \
-	Xuyuanp/nerdtree-git-plugin
+	Xuyuanp/nerdtree-git-plugin \
+	scrooloose/nerdcommenter
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 
 
@@ -36,7 +37,7 @@ function _git_clone() {
 function _ycm_init() {
 	pushd ${VIM_PLUGINS_FOLDER}/YouCompleteMe
 	git submodule update --init --recursive
-	./install.py
+	./install.py --go-completer --java-completer --clang-completer
 	popd
 }
 

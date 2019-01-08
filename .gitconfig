@@ -20,6 +20,7 @@
     folder = rev-parse --show-toplevel
     update = merge --ff-only
     conflicts = diff --diff-filter=U
+    br-diff = !sh -c 'git diff ${1:-master}...HEAD' -
 
 [color]
 	diff = auto

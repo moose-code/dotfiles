@@ -7,6 +7,8 @@ info "Installing Debian Packages"
 sudo apt-get update
 sudo apt-get install \
 	git \
+	curl \
+	xclip \
 	vim \
 	build-essential \
 	cmake \

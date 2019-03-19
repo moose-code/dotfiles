@@ -47,8 +47,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 """""""""""""
 " Search settings
 set ic hls is
-" Show line number
-set number
+" Show line number and relative numbers
+set number rnu
 " reload content
 set autoread
 " Update time lowered to 100ms in order to make GitGutter show the changes

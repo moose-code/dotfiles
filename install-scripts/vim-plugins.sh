@@ -13,7 +13,8 @@ VIM_PLUGIN_LIST="\
 	ervandew/supertab \
 	airblade/vim-gitgutter \
 	Xuyuanp/nerdtree-git-plugin \
-	scrooloose/nerdcommenter
+	scrooloose/nerdcommenter \
+	hashivim/vim-hashicorp-tools
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 
 

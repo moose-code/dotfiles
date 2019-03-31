@@ -14,6 +14,7 @@ VIM_PLUGIN_LIST="\
 	airblade/vim-gitgutter \
 	Xuyuanp/nerdtree-git-plugin \
 	scrooloose/nerdcommenter \
+	tomlion/vim-solidity \
 	hashivim/vim-hashicorp-tools
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 

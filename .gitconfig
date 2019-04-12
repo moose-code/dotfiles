@@ -30,6 +30,10 @@
 	interactive = auto
 	showbranch = auto
 	ui = auto
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = cyan
 
 [core]
 	editor = vim

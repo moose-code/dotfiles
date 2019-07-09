@@ -8,4 +8,4 @@ links:
 	install-scripts/symbolic-links.sh
 
 
-all: debian-packages vim links
+all: vim links

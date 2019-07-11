@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/usr/bin/xmodmap /home/fllaca/.Xmodmap
+Exec=/usr/bin/xmodmap /home/jasoons/.Xmodmap
 Hidden=false
 X-GNOME-Autostart-enabled=true
 Name=xmodmap

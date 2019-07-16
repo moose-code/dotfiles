@@ -54,3 +54,27 @@ set autoread
 " Update time lowered to 100ms in order to make GitGutter show the changes
 " faster
 set updatetime=100
+
+" Number of spaces when auto indenting:
+set shiftwidth=2
+
+" replace the last search pattern with input text
+nnoremap <c-h> :%s///gc<left><left><left>
+" Make the visually selected text a search
+vnoremap // y/<C-R>"<CR>
+
+" Allow yanking multiple times
+" (https://stackoverflow.com/questions/7163947/paste-multiple-times)
+xnoremap p pgvy
+
+
+" see https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
+execute "set <A-j>=\ej"
+execute "set <A-h>=\eh"
+execute "set <A-k>=\ek"
+execute "set <A-l>=\el"
+"nnoremap <M-j> j
+map <silent> <A-l> <C-w><
+map <silent> <A-j> <C-W>-
+map <silent> <A-k> <C-W>+
+map <silent> <A-h> <C-w>>

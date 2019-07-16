@@ -15,6 +15,7 @@ VIM_PLUGIN_LIST="\
 	Xuyuanp/nerdtree-git-plugin \
 	scrooloose/nerdcommenter \
 	tomlion/vim-solidity \
+	scrooloose/nerdtree-project-plugin \
 	hashivim/vim-hashicorp-tools
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 

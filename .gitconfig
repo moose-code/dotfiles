@@ -21,6 +21,7 @@
     update = merge --ff-only
     conflicts = diff --diff-filter=U
     br-diff = !sh -c 'git diff ${1:-master}...HEAD' -
+    pr = !sh -c \"git fetch origin pull/${1}/head:pr_${1}\"
 
 [color]
 	diff = auto

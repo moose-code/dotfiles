@@ -78,3 +78,7 @@ map <silent> <A-l> <C-w><
 map <silent> <A-j> <C-W>-
 map <silent> <A-k> <C-W>+
 map <silent> <A-h> <C-w>>
+
+" Save working directory Tree on exit
+autocmd VimLeave * :NERDTreeProjectSave getcwd()
+autocmd VimEnter * :NERDTreeProjectLoadFromCWD

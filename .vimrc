@@ -30,6 +30,11 @@ map <C-n> :NERDTreeToggle<CR>
 let mapleader = ","
 nmap <leader>ne :NERDTree<cr>
 
+" Save working directory Tree on exit
+" autocmd VimLeavePre * let current_dir=getcwd()
+" autocmd VimLeavePre * execute ':NERDTreeProjectSave' . current_dir
+" autocmd VimEnter * :NERDTreeProjectLoadFromCWD
+
 """""""""""""""""""""""
 " YouCompleteMe + UltiSnips
 """""""""""""""""""""""
@@ -79,6 +84,20 @@ map <silent> <A-j> <C-W>-
 map <silent> <A-k> <C-W>+
 map <silent> <A-h> <C-w>>
 
-" Save working directory Tree on exit
-autocmd VimLeave * :NERDTreeProjectSave getcwd()
-autocmd VimEnter * :NERDTreeProjectLoadFromCWD
+"""""""""""""""""""""""""""""
+" Whitespace highlighting
+"""""""""""""""""""""""""""""
+highlight ExtraWhitespace ctermbg=red guibg=red
+" Show trailing whitespace:
+" match ExtraWhitespace /\s\+$/
+" Show trailing whitespace and spaces before a tab:
+" match ExtraWhitespace /\s\+$\| \+\ze\t/
+" Show tabs that are not at the start of a line:
+"match ExtraWhitespace /[^\t]\zs\t\+/
+" Show spaces used for indenting (so you use only tabs for indenting).
+" match ExtraWhitespace /^\t*\zs \+/
+" Switch off :match highlighting.
+" match
+
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$\| \+\ze\t/
+autocmd InsertLeave * redraw!

@@ -22,4 +22,6 @@ _link ${dotfiles_dir}/.zshrc $HOME/.zshrc
 _link ${dotfiles_dir}/.config/autostart/xmodmap.desktop $HOME/.config/autostart/xmodmap.desktop
 _link ${dotfiles_dir}/.Xmodmap $HOME/.Xmodmap
 _link ${dotfiles_dir}/.vim/colors/monokai-soda.vim $HOME/.vim/colors/monokai-soda.vim
+_link ${dotfiles_dir}/.vim/coc-settings.json $HOME/.vim/coc-settings.json
+
 

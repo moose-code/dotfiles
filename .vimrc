@@ -101,3 +101,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$\| \+\ze\t/
 autocmd InsertLeave * redraw!
+
+" COC autocompletion trigger
+" (https://stackoverflow.com/questions/23189568/control-space-vim-key-binding-in-normal-mode-does-not-work)
+inoremap <silent><expr> <NUL> coc#refresh()

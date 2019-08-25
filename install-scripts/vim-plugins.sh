@@ -7,7 +7,6 @@ source ${script_dir}/common.sh
 
 VIM_PLUGIN_LIST="\
 	scrooloose/nerdtree \
-	Valloric/YouCompleteMe \
 	SirVer/ultisnips \
 	honza/vim-snippets \
 	ervandew/supertab \
@@ -16,7 +15,8 @@ VIM_PLUGIN_LIST="\
 	scrooloose/nerdcommenter \
 	tomlion/vim-solidity \
 	scrooloose/nerdtree-project-plugin \
-	hashivim/vim-hashicorp-tools
+	hashivim/vim-hashicorp-tools \
+	neoclide/coc.nvim
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 
 
@@ -36,19 +36,11 @@ function _git_clone() {
 	fi
 }
 
-# YouCompleteMe needs an install step to start working
-function _ycm_init() {
-	pushd ${VIM_PLUGINS_FOLDER}/YouCompleteMe
-	git submodule update --init --recursive
-	./install.py --go-completer --java-completer --clang-completer
-	popd
-}
-
 function main() {
 	# Install Pathogen
 	info "Installing Pathogen"
 	_pathogen_install
-	
+
 	# Download Plugins
 	info "Installing Vim Plugins:"
 	info "-----------------------"
@@ -57,9 +49,6 @@ function main() {
 		local plugin_name=$(last_path_segment $plugin)
 		_git_clone "https://github.com/${plugin}.git" "${VIM_PLUGINS_FOLDER}/${plugin_name}"
 	done
-
-	info "Extra step needed for YouCompleteMe plugin"
-	_ycm_init 
 }
 
 # Entrypoint

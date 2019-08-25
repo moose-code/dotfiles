@@ -1,0 +1,13 @@
+{
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  },
+  "yaml.schemas": {
+    "http://json.schemastore.org/ansible-stable-2.7": "*/ansible-*/**.yaml",
+    "Kubernetes": "*/cluster-config-*/**.yaml"
+  }
+}

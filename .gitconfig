@@ -1,6 +1,7 @@
 [user]
-	email = ferllarom@gmail.com
-	name = Fernando Llaca
+	email = Jason@smythemail.za.net
+	name = Jason Smythe
+	signingKey = ""
 [credential]
 	helper = store
 [alias]
@@ -41,3 +42,9 @@
 	editor = vim
 #[merge]
 #	ff = false
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false

@@ -19,8 +19,9 @@ _link ${dotfiles_dir}/.vimrc $HOME/.vimrc
 _link ${dotfiles_dir}/.gitconfig $HOME/.gitconfig
 _link ${dotfiles_dir}/.tmux.conf $HOME/.tmux.conf
 # _link ${dotfiles_dir}/.zshrc $HOME/.zshrc
-_link ${dotfiles_dir}/.config/autostart/xmodmap.desktop $HOME/.config/autostart/xmodmap.desktop
-_link ${dotfiles_dir}/.Xmodmap $HOME/.Xmodmap
+# _link ${dotfiles_dir}/.config/autostart/xmodmap.desktop $HOME/.config/autostart/xmodmap.desktop
+# _link ${dotfiles_dir}/.Xmodmap $HOME/.Xmodmap
+mkdir -p $HOME/.vim/colors/
 _link ${dotfiles_dir}/.vim/colors/monokai-soda.vim $HOME/.vim/colors/monokai-soda.vim
 _link ${dotfiles_dir}/.vim/coc-settings.json $HOME/.vim/coc-settings.json
 

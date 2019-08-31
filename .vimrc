@@ -30,6 +30,11 @@ map <C-n> :NERDTreeToggle<CR>
 let mapleader = ","
 nmap <leader>ne :NERDTree<cr>
 
+" Save working directory Tree on exit
+" autocmd VimLeavePre * let current_dir=getcwd()
+" autocmd VimLeavePre * execute ':NERDTreeProjectSave' . current_dir
+" autocmd VimEnter * :NERDTreeProjectLoadFromCWD
+
 """""""""""""""""""""""
 " YouCompleteMe + UltiSnips
 """""""""""""""""""""""
@@ -54,3 +59,49 @@ set autoread
 " Update time lowered to 100ms in order to make GitGutter show the changes
 " faster
 set updatetime=100
+
+" Number of spaces when auto indenting:
+set shiftwidth=2
+
+" replace the last search pattern with input text
+nnoremap <c-h> :%s///gc<left><left><left>
+" Make the visually selected text a search
+vnoremap // y/<C-R>"<CR>
+
+" Allow yanking multiple times
+" (https://stackoverflow.com/questions/7163947/paste-multiple-times)
+xnoremap p pgvy
+
+
+" see https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
+execute "set <A-j>=\ej"
+execute "set <A-h>=\eh"
+execute "set <A-k>=\ek"
+execute "set <A-l>=\el"
+"nnoremap <M-j> j
+map <silent> <A-l> <C-w><
+map <silent> <A-j> <C-W>-
+map <silent> <A-k> <C-W>+
+map <silent> <A-h> <C-w>>
+
+"""""""""""""""""""""""""""""
+" Whitespace highlighting
+"""""""""""""""""""""""""""""
+highlight ExtraWhitespace ctermbg=red guibg=red
+" Show trailing whitespace:
+" match ExtraWhitespace /\s\+$/
+" Show trailing whitespace and spaces before a tab:
+" match ExtraWhitespace /\s\+$\| \+\ze\t/
+" Show tabs that are not at the start of a line:
+"match ExtraWhitespace /[^\t]\zs\t\+/
+" Show spaces used for indenting (so you use only tabs for indenting).
+" match ExtraWhitespace /^\t*\zs \+/
+" Switch off :match highlighting.
+" match
+
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$\| \+\ze\t/
+autocmd InsertLeave * redraw!
+
+" COC autocompletion trigger
+" (https://stackoverflow.com/questions/23189568/control-space-vim-key-binding-in-normal-mode-does-not-work)
+inoremap <silent><expr> <NUL> coc#refresh()

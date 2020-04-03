@@ -11,7 +11,6 @@ function _link() {
 	local link=$2
 	info "Creating link '${link}' with target '${target}'"
 	rm -f ${link} && ln -s ${target} ${link}
-
 }
 
 info "Creating Symbolic links"

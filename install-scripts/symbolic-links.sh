@@ -24,4 +24,6 @@ mkdir -p $HOME/.vim/colors/
 _link ${dotfiles_dir}/.vim/colors/monokai-soda.vim $HOME/.vim/colors/monokai-soda.vim
 _link ${dotfiles_dir}/.vim/coc-settings.json $HOME/.vim/coc-settings.json
 
+echo "should setup zshi"
+${dotfiles_dir}/zsh/setupZshLinks.sh
 

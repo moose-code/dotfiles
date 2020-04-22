@@ -27,20 +27,10 @@
   "[reason]": {},
   "arduino.path": "/usr/local/arduino",
   "C_Cpp.formatting": "Disabled",
-  "vim.neovimPath": "/usr/bin/nvim",
   "vim.easymotion": true,
   "vim.normalModeKeyBindingsNonRecursive": {
-    "before": [
-      " "
-    ],
-    "after": [
-      "leader",
-      "leader",
-      "leader",
-      "b",
-      "d",
-      "w"
-    ]
+    "before": [" "],
+    "after": ["leader", "leader", "leader", "b", "d", "w"]
   },
   "liveshare.audio.startCallOnShare": true,
   "cSpell.allowCompoundWords": true,

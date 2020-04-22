@@ -10,4 +10,4 @@
     "command": "-editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   }
-]c
+]

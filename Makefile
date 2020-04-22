@@ -7,5 +7,7 @@ debian-packages:
 links:
 	install-scripts/symbolic-links.sh
 
+zsh-setup:
+	zsh/setupFzf-z.sh
 
-all: vim links
+all: vim links zsh-setup

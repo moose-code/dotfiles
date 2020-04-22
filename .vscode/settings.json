@@ -5,7 +5,7 @@
   "editor.formatOnPaste": true,
   "keyboard.dispatch": "keyCode",
   "explorer.confirmDelete": false,
-  "window.zoomLevel": -2,
+  "window.zoomLevel": 0,
   "editor.fontSize": 16,
   "workbench.activityBar.visible": true,
   "window.menuBarVisibility": "default",

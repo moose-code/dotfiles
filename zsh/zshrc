@@ -103,3 +103,8 @@ bindkey '^e' edit-command-line
 # fnm (I'm not sure if this is actually needed, it seems to work when I remove this. Anyway, left in to be safe)
 export PATH="$HOME/.fnm:$PATH"
 eval "`fnm env --multi`"
+
+# Setup golang
+export GOROOT=/snap/bin/go # install go via snap
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH

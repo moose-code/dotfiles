@@ -5,7 +5,7 @@
   "editor.formatOnPaste": true,
   "keyboard.dispatch": "keyCode",
   "explorer.confirmDelete": false,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "editor.fontSize": 16,
   "workbench.activityBar.visible": true,
   "window.menuBarVisibility": "default",
@@ -29,17 +29,8 @@
   "C_Cpp.formatting": "Disabled",
   "vim.easymotion": true,
   "vim.normalModeKeyBindingsNonRecursive": {
-    "before": [
-      " "
-    ],
-    "after": [
-      "leader",
-      "leader",
-      "leader",
-      "b",
-      "d",
-      "w"
-    ]
+    "before": [" "],
+    "after": ["leader", "leader", "leader", "b", "d", "w"]
   },
   "liveshare.audio.startCallOnShare": true,
   "cSpell.allowCompoundWords": true,

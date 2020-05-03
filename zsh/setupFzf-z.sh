@@ -3,6 +3,7 @@
 if ! git clone https://github.com/skywind3000/z.lua.git ~/.z.lua 2>/dev/null && [ -d "~/.z.lua" ] ; then
     echo "Clone failed because the .z.lua already exists"
 fi
+alias lua=lua5.3
 # Note: `z` has to be a command so that fzf-z doesn't install its own local version (and so it can use `z -l`)
 eval "$(lua ~/.z.lua/z.lua --init zsh enhanced fzf)"
 

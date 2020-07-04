@@ -17,14 +17,15 @@ fi
 #            once - use number of times you go into a directory rather than amount of time in a directory
 #            fzf - use fzf tab completion
 alias lua=lua5.3 ##incase lua isn't defined on your machine...
-eval "$(lua ~/.z.lua/z.lua --init zsh enhanced fzf)"
+eval "$(lua ~/.z.lua/z.lua --init zsh)"
+# eval "$(lua ~/.z.lua/z.lua --init zsh enhanced fzf)"
 #. ~/.z.script/z.sh
 
 # Setup fzf and fzf-z
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.fzf-z/fzf-z.plugin.zsh
 export FZFZ_EXTRA_DIRS="~/Documents"
-export FZFZ_SUBDIR_LIMIT=6
+export FZFZ_SUBDIR_LIMIT=1
 
 
 # allow `ctrl+a` to move you to the beginning of the line even in vi mode.
@@ -108,3 +109,10 @@ eval "`fnm env --multi`"
 export GOROOT=/snap/bin/go # install go via snap
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+. ~/.private_scripts.sh
+
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true

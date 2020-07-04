@@ -25,3 +25,7 @@ fi
 if ! git clone https://github.com/andrewferrier/fzf-z.git ~/.fzf-z 2>/dev/null && [ -d "~/.fzf-z" ] ; then
     echo "Clone failed because the .fzf-z already exists"
 fi
+
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+go get -u github.com/gokcehan/lf

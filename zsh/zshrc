@@ -1,6 +1,3 @@
-# Add snap to path
-export PATH="/snap/bin:$PATH"
-
 #
 # Executes commands at the start of an interactive session.
 #
@@ -14,6 +11,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Add snap to path
+export PATH="/snap/bin:$PATH"
+
+
 
 # add z.lua (a fast `z`).
 #     NOTES: enhanced - use a silgtly different ranking algorithm than original `z`
@@ -113,19 +115,13 @@ eval "`fnm env --multi`"
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-<<<<<<< Updated upstream
-=======
 export PATH=~/bin:$PATH
->>>>>>> Stashed changes
-. ~/.private_scripts.sh
+
 
 
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-<<<<<<< Updated upstream
-=======
-
 
 # Setup completion
 fpath=(~/.zsh/completion $fpath)
@@ -141,4 +137,5 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
 alias oni2="Onivim.AppImage --force-device-scale-factor 2"
->>>>>>> Stashed changes
+
+. ~/.private_scripts.sh

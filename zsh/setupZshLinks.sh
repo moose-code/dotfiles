@@ -3,6 +3,9 @@
 zsh_dir=$(cd $(dirname $0) && pwd)
 zshConfigBackupFolder=~/.zsh-backup-$(date +%M)
 
+rm -rf ${ZDOTDIR:-$HOME}/.zprezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
 mkdir -p ${zshConfigBackupFolder}
 mv ~/.zlogin ${zshConfigBackupFolder}
 mv ~/.zlogout ${zshConfigBackupFolder}

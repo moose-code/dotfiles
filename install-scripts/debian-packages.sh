@@ -14,5 +14,6 @@ sudo apt-get install \
 	cmake \
 	python3-dev \
 	tmux \
-	zsh
+	zsh \
+  lua5.3
 

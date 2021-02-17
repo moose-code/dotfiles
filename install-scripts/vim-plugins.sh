@@ -16,7 +16,7 @@ VIM_PLUGIN_LIST="\
 	tomlion/vim-solidity \
 	scrooloose/nerdtree-project-plugin \
 	hashivim/vim-hashicorp-tools \
-	neoclide/coc.nvim
+	# neoclide/coc.nvim
 	"
 VIM_PLUGINS_FOLDER=$HOME/.vim/bundle 
 
@@ -52,5 +52,5 @@ function main() {
 }
 
 # Entrypoint
-main
+# main
 

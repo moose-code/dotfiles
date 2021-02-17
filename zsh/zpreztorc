@@ -120,7 +120,11 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 #zstyle ':prezto:module:prompt' theme 'sorin'
+<<<<<<< Updated upstream
 prompt pure
+=======
+zstyle ':prezto:module:prompt' theme 'pure'
+>>>>>>> Stashed changes
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)

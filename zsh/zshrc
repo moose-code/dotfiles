@@ -1,3 +1,6 @@
+# Add snap to path
+export PATH="/snap/bin:$PATH"
+
 #
 # Executes commands at the start of an interactive session.
 #
@@ -88,7 +91,7 @@ done
 autoload -U select-bracketed
 zle -N select-bracketed
 for m in visual viopp; do
-  for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
+  for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do  #'
     bindkey -M $m $c select-bracketed
   done
 done
@@ -102,17 +105,40 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
 # fnm (I'm not sure if this is actually needed, it seems to work when I remove this. Anyway, left in to be safe)
-export PATH="$HOME/.fnm:$PATH"
+export PATH="$HOME/.fnm:$HOME/snap:$PATH"
 eval "`fnm env --multi`"
 
 # Setup golang
-export GOROOT=/snap/bin/go # install go via snap
+# export GOROOT=/snap/bin/go # install go via snap
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+<<<<<<< Updated upstream
+=======
+export PATH=~/bin:$PATH
+>>>>>>> Stashed changes
 . ~/.private_scripts.sh
 
 
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+<<<<<<< Updated upstream
+=======
+
+
+# Setup completion
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+# This somehow gets git to have proper autocomplete even though hub is also aliased to git.
+setopt complete_aliases
+source <(kubectl completion zsh)
+
+complete -C '/usr/local/bin/aws_completer' aws
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+alias oni2="Onivim.AppImage --force-device-scale-factor 2"
+>>>>>>> Stashed changes

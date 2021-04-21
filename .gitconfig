@@ -9,6 +9,8 @@
 	ci = commit
 	st = status
 	tree = log --graph --oneline --all
+  # to view all commits (even those not on a branch/detached heads)
+  tree-full = !sh -c 'git log --graph --decorate $(git rev-list -g --all)'
 
     unstage = reset HEAD --
     last = log -1 HEAD

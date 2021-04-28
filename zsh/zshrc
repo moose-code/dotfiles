@@ -108,7 +108,7 @@ bindkey '^e' edit-command-line
 
 # fnm (I'm not sure if this is actually needed, it seems to work when I remove this. Anyway, left in to be safe)
 export PATH="$HOME/.fnm:$HOME/snap:$PATH"
-eval "`fnm env --multi`"
+eval "`fnm env `"
 
 # Setup golang
 # export GOROOT=/snap/bin/go # install go via snap
@@ -129,9 +129,9 @@ autoload -Uz compinit && compinit -i
 
 # This somehow gets git to have proper autocomplete even though hub is also aliased to git.
 setopt complete_aliases
-source <(kubectl completion zsh)
+#source <(kubectl completion zsh)
 
-complete -C '/usr/local/bin/aws_completer' aws
+#complete -C '/usr/local/bin/aws_completer' aws
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
